@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDP Support Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CDP Support Chatbot</h1>
+        <form id="chatbot-form">
+            <label for="platform">Platform:</label>
+            <select id="platform" name="platform">
+                <option value="segment">Segment</option>
+                <option value="mparticle">mParticle</option>
+                <option value="lytics">Lytics</option>
+                <option value="zeotap">Zeotap</option>
+            </select>
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question" placeholder="Ask your question..." required>
+            <button type="submit">Ask</button>
+        </form>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById("chatbot-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const platform = document.getElementById("platform").value;
+            const question = document.getElementById("question").value;
+
+            const response = await fetch("/query", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ platform, question })
+            });
+
+            const result = await response.json();
+            document.getElementById("response").innerText = result.answer || result.error;
+        });
+    </script>
+</body>
+</html>
