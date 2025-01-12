@@ -1,0 +1,132 @@
+/* General Styles
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+} */
+
+/* Chatbot Container */
+/* .chatbot-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+} */
+
+/* Header */
+/* header {
+    background: #0056b3;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+} */
+
+/* Form */
+/* form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: 500;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input, select {
+    background: #f9f9f9;
+}
+
+button {
+    background: #0056b3;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00408d;
+}
+
+button:active {
+    transform: scale(0.98);
+} */
+
+/* Response Container */
+/* #response-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#response {
+    font-weight: 500;
+    color: #006400;
+} */
+
+/* Footer */
+/* footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+} */
+/* Chatbot Container */
+.chatbot-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#chat-window {
+    height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-message, .bot-message {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.user-message {
+    background: #e6f7ff;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #f0f0f0;
+    align-self: flex-start;
+}
